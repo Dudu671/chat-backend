@@ -1,5 +1,5 @@
-const app = require('./src/app')
+const http = require('./src/http')
 
-app.listen(3001, () => {
+http.listen(3001, () => {
     console.log('Server running on port 3001')
 })
