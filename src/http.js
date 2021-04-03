@@ -11,6 +11,13 @@ const io = require('socket.io')(http, {
 app.use(cors)
 
 io.on('connection', (socket) => {
+    socket.on('user disconnected', (userInfo) => {
+        io.emit('user disconnected', userInfo)
+        console.log(userInfo)
+    })
+})
+
+io.on('connection', (socket) => {
     socket.on('chat message', (msg) => {
         io.emit('chat message', msg)
     })
