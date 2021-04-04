@@ -18,9 +18,7 @@
   },
   "homepage": "https://github.com/Dudu671/chat-backend#readme",
   "dependencies": {
-    "cors": "^2.8.5",
-    "express": "^4.17.1",
-    "socket.io": "^4.0.0"
+    "websocket": "^1.0.33"
   },
   "devDependencies": {
     "@types/jest": "^26.0.22",
