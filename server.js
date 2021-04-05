@@ -10,8 +10,7 @@ wsServer.on('request', function (request) {
     const connection = request.accept(null, request.origin)
 
     connection.on('message', (message) => {
-        let buf = new Buffer.from(message.utf8Data)
-        wsServer.broadcast(new Array(buf))
+        wsServer.broadcast(message.utf8Data)
     })
 })
 
